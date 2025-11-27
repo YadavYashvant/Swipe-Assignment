@@ -28,7 +28,7 @@ class ProductRepository(
     }
 
 
-    suspend fun fetchAndSaveProducts(): Flow<Resource<List<Product>>> = flow {
+    fun fetchAndSaveProducts(): Flow<Resource<List<Product>>> = flow {
         emit(Resource.Loading())
 
         try {
@@ -49,7 +49,7 @@ class ProductRepository(
     }
 
 
-    suspend fun addProduct(
+    fun addProduct(
         productName: String,
         productType: String,
         price: String,
@@ -116,7 +116,7 @@ class ProductRepository(
     }
 
 
-    suspend fun syncUnsyncedProducts(): Flow<Resource<Int>> = flow {
+    fun syncUnsyncedProducts(): Flow<Resource<Int>> = flow {
         emit(Resource.Loading())
 
         try {

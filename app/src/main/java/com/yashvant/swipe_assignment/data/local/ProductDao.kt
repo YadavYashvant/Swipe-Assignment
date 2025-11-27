@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ProductDao {
 
-    @Query("SELECT * FROM products ORDER BY createdAt DESC")
+    @Query("SELECT * FROM products")
     fun getAllProducts(): Flow<List<Product>>
 
 

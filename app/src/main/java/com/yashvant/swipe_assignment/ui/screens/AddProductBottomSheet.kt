@@ -141,6 +141,7 @@ fun AddProductBottomSheet(
                         .menuAnchor(),
                     isError = showErrors && productType.isBlank()
                 )
+
                 ExposedDropdownMenu(
                     expanded = expanded,
                     onDismissRequest = { expanded = false }
@@ -156,6 +157,7 @@ fun AddProductBottomSheet(
                     }
                 }
             }
+
             if (showErrors && productType.isBlank()) {
                 Text(
                     text = "Please select a product type",
